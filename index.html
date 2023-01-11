@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>palindrome checker</title>
+    <title>palindrome Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <script src="palindromeChecker.js"></script>
 <div class="wheel">
-    <div class="secondWheel">
-    </div>
-   <defs>
-   <text>
-     <textPath>
-       No. of consonants
-     </textPath>
-   </text>
-      </defs>
-    </div>
+  <div>
+    <svg xmlns="https://www.w3.org.2000/svg" width="900" height="900">
+        <defs>
+          <path id="textCircle" d="M 50, 
+          400 a150, 
+          150 0 0,
+          1 0, 
+          -300a 150,
+          150 0 0, 
+          1 0, 
+          300Z" />
+       </defs>
+        <text>
+          <textPath
+            href="#textCircle">
+            No. of consonants
+          </textPath>
+        </text>
+    </svg>
+  </div>
+  <div class="secondWheel">
+  </div>
+</div>
 </body>
 </html>
