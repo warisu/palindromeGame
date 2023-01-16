@@ -11,20 +11,22 @@
 <script src="palindromeChecker.js"></script>
 <div class="wheel">
   <div>
-    <svg xmlns="https://www.w3.org.2000/svg" width="900" height="900">
+    <svg xmlns="https://www.w3.org.2000/svg" width="900" height="500" viewBox="0 0 900 900">
         <defs>
-          <path id="textCircle" d="M 50, 
-          400 a150, 
-          150 0 0,
-          1 0, 
-          -300a 150,
-          150 0 0, 
-          1 0, 
-          300Z" />
+          <path id="textCircle" d="M 25, 
+          450 a 426, 
+          425 0 1,
+          0 850, 
+          0 a 425,
+          425 0 1, 
+          0 -825, 
+          0" />
        </defs>
+       <circle cx="450" cy="450" r="448" stroke="black" fill="transparent" stroke-width="4" />
+       <circle cx="450" cy="450" r="300" stroke="black" fill="transparent" stroke-width="4" />
         <text>
           <textPath
-            href="#textCircle">
+            href="#textCircle" font-size="30">
             No. of consonants
           </textPath>
         </text>
