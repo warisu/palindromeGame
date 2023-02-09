@@ -9,20 +9,19 @@
     <script src="palindromeChecker.js" defer></script>
 </head>
 <body>
-<div class="wheel">
   <div>
     <svg xmlns="https://www.w3.org.2000/svg" width="900" height="500" viewBox="0 0 900 900">
         <defs>
-          <path id="textCircle" d="M 25, 
+          <path id="textcircleOne" d="M 70, 
           450 a 426, 
           425 0 1,
           0 850, 
           0 a 425,
           425 0 1, 
-          0 -825, 
+          0 -850, 
           0" />
        </defs>
-       <defs>
+      <defs>
         <path id="textcircleTwo" d="M 800,
          400 a 250,
          400 0 1,
@@ -34,38 +33,70 @@
       </defs>
       <defs>
         <path id="textcircleThree" d="M 350,
-         800 a 0,
-         400 0 1,
-         0 800,
-         0 a 300,
-         400 0 1,
-         0 -800,
+         800 a 300,
+         50 0 1,
+         0 600,
+         0 a 50,
+         50 0 1,
+         0 -600,
         0" />
       </defs>
-       <circle cx="450" cy="450" r="448" stroke="black" fill="transparent" stroke-width="4" />
-       <circle cx="450" cy="450" r="300" stroke="black" fill="transparent" stroke-width="4" />
+       <defs>
+        <path id="textcircleFour" d="M 350,
+         70 a 250,
+         20 0 1,
+         0 600,
+         0 a 50,
+         50 0 1,
+         0 -600,
+        0" />
+      </defs>
+      <defs>
+        <path id="textCenter" d="M 350,
+         450 a 250,
+         20 0 1,
+         0 600,
+         0 a 50,
+         50 0 1,
+         0 -600,
+        0" />
+      </defs>
+      <circle cx='450' cy='450' r='448' stroke='black' fill="transparent" stroke-width='4'/>
+  <circle cx='450' cy='450' r='300' stroke='black' fill="transparent" stroke-width='4' />
         <text>
           <textPath
-            href="#textCircle" font-size="30">
+            href="#textcircleOne" font-size="30">
             No. of consonants
           </textPath>
         </text>
-        <text>
-          <textPath
-                      href="#textcircleTwo" font-size="30">
-              No. of vowel
-            </textPath>
-        </text>
-        <text>
-          <textPath
-                      href="#textcircleThree" font-size="30">
-              Reverse String
-            </textPath>
-        </text>
+      <text>
+        <textPath
+                    href="#textcircleTwo" font-size="30">
+            No. of vowel
+          </textPath>
+      </text>
+      <text>
+        <textPath
+                    href="#textcircleThree" font-size="30">
+            Reverse Word
+          </textPath>
+      </text>
+      <text>
+        <textPath
+                    href="#textcircleFour" font-size="30">
+            Word Origin
+          </textPath>
+      </text>
+      <text>
+        <textPath
+                    href="#textCenter" font-size="30">
+            Palindrome?
+          </textPath>
+      </text>
     </svg>
   </div>
-  <div class="secondWheel">
-  </div>
-</div>
+  <button>
+    Play Game
+  </button>
 </body>
 </html>

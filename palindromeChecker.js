@@ -1,3 +1,4 @@
+
 function palindrome(str, firstRun = true) {
 // remove all alphanumeric characters and replace with ""
 const testStr = firstRun ? str.toLowerCase().replace(/[^0-9a-z]/g, "") : str;
