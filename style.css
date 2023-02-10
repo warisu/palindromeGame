@@ -1,29 +1,31 @@
-/* .wheel {
-    border: 2px solid black;
-    border-radius: 50%;
-  /*   margin-left: 50px; */
-    /* position: absolute;
-    height: 55vw;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    max-height: 500px;
-    max-width: 500px; 
-    margin: auto;
-  } */
-  /* .secondWheel {
-    border: 2px solid black;
-    border-radius: 50%; */
-  /*   margin-left: 50px; */
-    /* position: absolute;
-    top: 20px;
-    bottom: 20px;
-    right: 20px;
-    left: 20px;
-    width: 30vw;
-    height: 30vw;
-    max-height: 500px;
-    max-width: 500px;
-    margin: auto;
-  } */ 
+text {
+  fill: blue;
+  font-size: 30px;
+}
+
+.btn {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 50px;
+  width: 100px;
+  /* margin: auto; */
+}
+
+#insideText {
+  display: block;
+  width: 25%;
+  height: 40px;
+  text-align: center;
+  margin: 30px 0 20px 0;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#insideText:focus {
+  outline: none;
+  border-color:coral;
+}
