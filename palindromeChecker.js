@@ -1,7 +1,11 @@
 let enterKey = document.getElementById("insideText");
+// function definition
 enterKey.addEventListener("keyup", 
     function palindrome(str, firstRun = true) {
-    // remove all alphanumeric characters and replace with ""
+    // check to str is a string
+        if (typeof str !== 'string') 
+       return false;
+        // remove all alphanumeric characters and replace with ""
     const testStr = firstRun ? str.toLowerCase().replace(/[^0-9a-z]/g, "") : str;
     if (testStr.length === 1) {
         return true
@@ -18,3 +22,10 @@ enterKey.addEventListener("keyup",
     return false
     }
 )
+
+// Event Listener
+enterKey.addEventListener('keyup', function(event) {
+    const input = event.target.value;
+    const result = palindrome(input);
+    console.log(`The word "${input}" is ${result ? "" : "not"} a palindrome.`);
+})
