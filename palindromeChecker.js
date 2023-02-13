@@ -1,10 +1,10 @@
 let enterKey = document.getElementById("insideText");
 // function definition
-enterKey.addEventListener("keyup", 
+enterKey.addEventListener("keypress", function(event) {
     function palindrome(str, firstRun = true) {
-    // check to str is a string
-        if (typeof str !== 'string') 
-       return false;
+    // check if str is a string
+    //     if (typeof str !== 'string') 
+    //    return false;
         // remove all alphanumeric characters and replace with ""
     const testStr = firstRun ? str.toLowerCase().replace(/[^0-9a-z]/g, "") : str;
     if (testStr.length === 1) {
@@ -21,11 +21,36 @@ enterKey.addEventListener("keyup",
     // if none of the conditions is found, return this
     return false
     }
-)
 
-// Event Listener
-enterKey.addEventListener('keyup', function(event) {
     const input = event.target.value;
     const result = palindrome(input);
-    console.log(`The word "${input}" is ${result ? "" : "not"} a palindrome.`);
+    const reversed = reverseWord(input);
+    const letter = vowelOrConsonantLetters(input);
+    console.log(`The word "${input}" is ${result ? "" : "not"} a palindrome its reverse word is ${reversed} and whether it is a vowel ${letter.vowelCount} or consonant ${letter.consonantCount}.`);
 })
+
+function reverseWord(str) {
+    // declare an empty variable
+    let reversedWord = "";
+    // loop through in a reverse manner
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedWord += str[i]
+    }
+  return reversedWord;  
+}
+
+function vowelOrConsonantLetters(str) {
+    let vowelCount = 0;
+    let consonantCount = 0;
+    let smallLetter = str.toLowerCase();
+    for (let i of smallLetter) {
+        if (i === 'a' || i === 'e' || i === 'i' || i === 'o' || i === 'u') {
+             vowelCount += 1
+        } else if (i >= 'a' && i <= 'z'){
+             consonantCount += 1
+        }
+    }
+     return {vowelCount, consonantCount};
+}
+
+document.querySelector('#textcircleTwo').textContent = `No. of vowels: ${vowelCount}`
