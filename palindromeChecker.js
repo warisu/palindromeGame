@@ -27,6 +27,7 @@ enterKey.addEventListener("keypress", function(event) {
     const reversed = reverseWord(input);
     const letter = vowelOrConsonantLetters(input);
     console.log(`The word "${input}" is ${result ? "" : "not"} a palindrome its reverse word is ${reversed} and whether it is a vowel ${letter.vowelCount} or consonant ${letter.consonantCount}.`);
+    document.querySelector('#textcircleTwo').textContent = `No. of vowels: ${letter.vowelCount}`
 })
 
 function reverseWord(str) {
@@ -53,4 +54,3 @@ function vowelOrConsonantLetters(str) {
      return {vowelCount, consonantCount};
 }
 
-document.querySelector('#textcircleTwo').textContent = `No. of vowels: ${vowelCount}`
