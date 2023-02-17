@@ -10,7 +10,7 @@
 </head>
 <body>
   <div>
-    <svg xmlns="https://www.w3.org.2000/svg" width="900" height="500" viewBox="0 0 900 900">
+    <svg width="900" height="500" viewBox="0 0 900 900" xmlns="https://www.w3.org.2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml">
         <defs>
           <path id="textcircleOne" d="M 70, 
           450 a 426, 
@@ -71,7 +71,11 @@
       <text>
         <textPath href="#textcircleTwo">
             No. of vowel
-              <tspan dy="2.0em">46</tspan>
+              <foreignObject x="10" y="10" width="200" height="100">
+                <xhtml:span class="new">
+                 This is a paragraph inside
+                </xhtml:span>
+              </foreignObject>
           </textPath>
       </text>
       <text>
