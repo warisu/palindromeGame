@@ -10,9 +10,9 @@
 </head>
 <body>
   <div>
-    <svg width="900" height="500" viewBox="0 0 900 900" xmlns="https://www.w3.org.2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <svg width="900" height="500" viewBox="0 0 900 900" xmlns="https://www.w3.org.2000/svg">
         <defs>
-          <path id="textcircleOne" d="M 70, 
+          <path id="conTxt" d="M 70, 
           450 a 426, 
           425 0 1,
           0 850, 
@@ -22,7 +22,7 @@
           0" />
        </defs>
       <defs>
-        <path id="textcircleTwo" d="M 800,
+        <path id="vowTxt" d="M 800,
          400 a 250,
          400 0 1,
          0 800,
@@ -32,7 +32,7 @@
         0" />
       </defs>
       <defs>
-        <path id="textcircleThree" d="M 350,
+        <path id="revTxt" d="M 350,
          800 a 300,
          50 0 1,
          0 600,
@@ -42,7 +42,7 @@
         0" />
       </defs>
        <defs>
-        <path id="textcircleFour" d="M 350,
+        <path id="oriTxt" d="M 350,
          70 a 250,
          20 0 1,
          0 600,
@@ -52,7 +52,7 @@
         0" />
       </defs>
       <defs>
-        <path id="textCenter" d="M 350,
+        <path id="palTxt" d="M 350,
          450 a 250,
          20 0 1,
          0 600,
@@ -64,41 +64,37 @@
       <circle cx='450' cy='450' r='448' stroke='black' fill="transparent" stroke-width='4'/>
   <circle cx='450' cy='450' r='300' stroke='black' fill="transparent" stroke-width='4' />
         <text>
-          <textPath href="#textcircleOne">
+          <textPath href="#conTxt">
             No. of consonants
           </textPath>
         </text>
       <text>
-        <textPath href="#textcircleTwo">
-            No. of vowel
-              <foreignObject x="10" y="10" width="200" height="100">
-                <xhtml:span class="new">
-                 This is a paragraph inside
-                </xhtml:span>
-              </foreignObject>
+        <textPath href="#vowTxt">
+            No. of vowel 
+                 <tspan x="0" dy="1.2em" lengthAdjust="spacingAndGlyphs" class="vowSpan">is</tspan>
           </textPath>
       </text>
       <text>
-        <textPath
-                    href="#textcircleThree">
+        <textPath href="#revTxt">
             Reverse Word
+            <tspan x="0" dy="1.2em" lengthAdjust="spacingAndGlyphs" class="revSpan"></tspan>
           </textPath>
       </text>
       <text>
         <textPath
-                    href="#textcircleFour">
+                    href="#oriTxt">
             Word Origin
           </textPath>
       </text>
       <text>
         <textPath
-                    href="#textCenter">
+                    href="#palTxt">
             Palindrome?
           </textPath>
       </text>
     </svg>
   </div> 
-    <input required type="text" placeholder="Enter any Word" name="textLabel"  id="insideText" autocomplete="off"/>
+    <input required type="text" placeholder="Enter any Word" name="textLabel"  id="inputTxt" autocomplete="off"/>
   <button class="btn">
     Play Game
   </button>

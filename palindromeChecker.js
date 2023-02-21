@@ -1,6 +1,5 @@
-let enterKey = document.getElementById("insideText");
-// function definition
-enterKey.addEventListener("keypress", function(event) {
+// let revKey = document.querySelector('.revSpan');
+// enterKey.addEventListener("keypress", function(event) {
     function palindrome(str, firstRun = true) {
     // check if str is a string
     //     if (typeof str !== 'string') 
@@ -22,23 +21,24 @@ enterKey.addEventListener("keypress", function(event) {
     return false
     }
 
-    const input = event.target.value;
-    const result = palindrome(input);
-    const reversed = reverseWord(input);
-    const letter = vowelOrConsonantLetters(input);
-    console.log(`The word "${input}" is ${result ? "" : "not"} a palindrome its reverse word is ${reversed} and whether it is a vowel ${letter.vowelCount} or consonant ${letter.consonantCount}.`);
-    document.querySelector('#textcircleTwo').textContent = `No. of vowels: ${letter.vowelCount}`
-})
+    // const input = event.target.value;
+    // const result = palindrome(input);
+    // const reversed = reverseWord(input);
+    // const letter = vowelOrConsonantLetters(input);
+    // console.log(`The word "${input}" is ${result ? "" : "not"} a palindrome its reverse word is ${reversed} and whether it is a vowel ${letter.vowelCount} or consonant ${letter.consonantCount}.`);
+    // document.querySelector('#textcircleTwo').textContent = `No. of vowels: ${letter.vowelCount}`
+// })
 
-function reverseWord(str) {
-    // declare an empty variable
-    let reversedWord = "";
-    // loop through in a reverse manner
-    for (let i = str.length - 1; i >= 0; i--) {
-        reversedWord += str[i]
-    }
-  return reversedWord;  
-}
+// window.addEventListener('DOMContentLoaded', function() {
+    let revKey = document.querySelector('.revSpan');
+
+            document.getElementById('inputTxt').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+            let reverseWord = event.target.value.split('').reverse().join('');
+            revKey.textContent = reverseWord;
+        }
+    })
+// });
 
 function vowelOrConsonantLetters(str) {
     let vowelCount = 0;
