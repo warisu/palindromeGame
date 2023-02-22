@@ -9,10 +9,11 @@ text {
   justify-content: center; */
   height: 50px;
   width: 100px;
+  cursor: pointer;
   /* margin: auto; */
 }
 
-#insideText {
+#inputTxt {
   display: block;
   width: 25%;
   height: 40px;
@@ -25,7 +26,11 @@ text {
   font-size: 20px;
 }
 
-#insideText:focus {
+#inputTxt:focus {
   outline: none;
   border-color:coral;
+}
+
+.gameColor {
+  color: yellow;
 }
