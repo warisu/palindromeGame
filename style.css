@@ -1,6 +1,14 @@
+#container {
+   display: grid;
+   
+   border: 2px solid green;
+   box-sizing: border-box;
+}
+
 text {
   fill: blue;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -32,5 +40,21 @@ text {
 }
 
 .gameColor {
-  color: yellow;
+  fill: rgb(246, 9, 9);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+.roll {
+  animation: roll 2s linear 1;
+  /* animation-duration: 10s; */
+  /* animation-fill-mode: forwards; */
+  transform-origin: center;
 }

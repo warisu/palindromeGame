@@ -14,9 +14,12 @@ const updateTxt = () => {
     vowKey.textContent = letters.vowelCount;
     conKey.textContent = letters.consonantCount;
     const spanKeys = document.querySelectorAll('tspan');
+    const svgKeys = document.querySelector('svg');
+    // console.log(spanKeys.length);
     for (let i = 0; i < spanKeys.length; i++) {
         spanKeys[i].classList.add('gameColor')
-    }
+    };
+    svgKeys.classList.add('roll');
 }
 
 document.getElementById('inputTxt').addEventListener('keydown', function(event) {
