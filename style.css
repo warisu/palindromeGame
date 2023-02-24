@@ -1,8 +1,26 @@
-#container {
-   display: grid;
-   
-   border: 2px solid green;
-   box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0 5px 0;
+  font-size: 2.5em;
+  font-family: 'Satisfy', cursive;
+}
+
+p.introTxt {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-family: 'Satisfy', cursive;
+}
+
+.game-wrapper {
+  background-color: rgb(244, 193, 244);
 }
 
 text {
@@ -12,13 +30,17 @@ text {
 }
 
 .btn {
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
   height: 50px;
   width: 100px;
   cursor: pointer;
-  /* margin: auto; */
+  margin: auto;
+}
+
+.btn:hover{
+  background-color: rgb(152, 152, 237);
 }
 
 #inputTxt {
@@ -26,12 +48,16 @@ text {
   width: 25%;
   height: 40px;
   text-align: center;
-  margin: 30px 0 20px 0;
   border-radius: 5px;
   border-width: 3px;
   border-style: solid;
   padding: 10px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
 }
 
 #inputTxt:focus {
@@ -53,8 +79,21 @@ text {
 } 
 
 .roll {
-  animation: roll 2s linear 1;
+  animation: roll 0.3s linear 2;
   /* animation-duration: 10s; */
   /* animation-fill-mode: forwards; */
   transform-origin: center;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

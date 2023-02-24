@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>palindrome Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="palindromeChecker.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<script src="palindromeChecker.js" defer></script>
 </head>
 <body>
 <div id="container">
-  <div>
+<div class="game-wrapper">
+  <div class="intro">
+    <h1>Palindrome game</h1>
+    <p class="introTxt">
+      Try it out, you're guaranteed to have the fun of your life
+    </p>
+  </div>
     <svg width="900" height="500" viewBox="0 0 900 900" xmlns="https://www.w3.org.2000/svg">
         <defs>
           <path id="conTxt" d="M 70, 
@@ -84,7 +93,7 @@
       </text>
       <text>
         <textPath href="#oriTxt">
-            Word Origin
+            previous word
             <tspan x="0" dy="1.2em" lengthAdjust="spacingAndGlyphs" id="oriSpan"></tspan>
           </textPath>
       </text>
@@ -95,11 +104,15 @@
           </textPath>
       </text>
     </svg>
-  </div> 
+   
     <input required type="text" placeholder="Enter any Word" name="textLabel"  id="inputTxt" autocomplete="off"/>
   <button class="btn">
     Play Game
   </button>
+</div>
+<div class="copyright">
+  <footer>&copy2023, ODIgames. All rights reserved</footer>
+</div>
 </div>
 </body>
 </html>
