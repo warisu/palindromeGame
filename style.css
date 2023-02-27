@@ -7,8 +7,13 @@
   text-align: center;
 }
 
-h1 {
-  margin: 20px 0 5px 0;
+html {
+  box-sizing: box-border;
+  scroll-behavior: smooth;
+}
+
+h1 { 
+  margin: 0 0 5px 0;
   font-size: 2.5em;
   font-family: 'Satisfy', cursive;
 }
@@ -21,6 +26,8 @@ p.introTxt {
 
 .game-wrapper {
   background-color: rgb(244, 193, 244);
+  height: 100%;
+  width: 100%;
 }
 
 text {
@@ -96,4 +103,5 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px 0 10px 0;
 }
