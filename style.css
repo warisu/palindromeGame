@@ -1,26 +1,23 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: box-border;
+  scroll-behavior: smooth;
 }
 
 .intro {
   text-align: center;
 }
 
-html {
-  box-sizing: box-border;
-  scroll-behavior: smooth;
-}
-
 h1 { 
-  margin: 0 0 5px 0;
-  font-size: 2.5em;
+  margin-bottom: 5px;
+  font-size: 2.5rem;
   font-family: 'Satisfy', cursive;
 }
 
 p.introTxt {
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-family: 'Satisfy', cursive;
 }
 
@@ -44,6 +41,7 @@ text {
   width: 100px;
   cursor: pointer;
   margin: auto;
+  padding: 1em;
 }
 
 .btn:hover{
@@ -51,20 +49,20 @@ text {
 }
 
 #inputTxt {
-  display: block;
+  /* display: block; */
   width: 25%;
   height: 40px;
   text-align: center;
   border-radius: 5px;
   border-width: 3px;
   border-style: solid;
-  padding: 10px;
-  font-size: 20px;
+  padding: 0.5em;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 3em;
 }
 
 #inputTxt:focus {
@@ -103,5 +101,5 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }

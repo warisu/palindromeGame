@@ -2,7 +2,7 @@ const revKey = document.querySelector('#revSpan');
 const palKey = document.querySelector('#palSpan');
 const conKey = document.querySelector('#conSpan');
 const vowKey = document.querySelector('#vowSpan');
-const oriKey = document.querySelector('#oriSpan');
+const wordKey = document.querySelector('#wordSpan');
 
 const updateTxt = () => {
     const inputText = document.getElementById('inputTxt').value;
@@ -63,7 +63,6 @@ function reverseWord(str) {
      return reversed
 }
 
-
 function vowelOrConsonantLetters(str) {
     let vowelCount = 0;
     let consonantCount = 0;
@@ -77,4 +76,6 @@ function vowelOrConsonantLetters(str) {
     }
      return {vowelCount, consonantCount};
 }
+
+
 
