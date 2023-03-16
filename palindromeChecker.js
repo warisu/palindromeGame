@@ -4,15 +4,21 @@ const conKey = document.querySelector('#conSpan')
 const vowKey = document.querySelector('#vowSpan')
 const wordKey = document.querySelector('#wordSpan')
 
+// let previousWord = ''
+
+
 const updateTxt = () => {
-  const inputText = document.getElementById('inputTxt').value
+  var inputText = document.getElementById('inputTxt').value
   const reversedWord = reverseWord(inputText)
   const palindromeChecker = palindrome(inputText)
   const letters = vowelOrConsonantLetters(inputText)
+  const getPreviousWorded = getPreviousWord(inputText)
   revKey.textContent = reversedWord
   palKey.textContent = palindromeChecker
   vowKey.textContent = letters.vowelCount
   conKey.textContent = letters.consonantCount
+  // wordKey.textContent = inputText
+  wordKey.textContent = getPreviousWorded
   const spanKeys = document.querySelectorAll('tspan')
   const svgKeys = document.querySelector('svg')
   // console.log(spanKeys.length);
@@ -26,7 +32,7 @@ document.getElementById('inputTxt').addEventListener('keydown', function (event)
   if (event.key === 'Enter') {
     updateTxt()
   }
-  console.log(target.value)
+   
 })
 
 // target the button element
@@ -77,10 +83,10 @@ function vowelOrConsonantLetters (str) {
   return { vowelCount, consonantCount }
 };
 
-function previousWord () {
-// store it in an empty array initially
-    
+function getPreviousWord (inputText) {
+  const matches = [...inputText.matchAll(/\w+/g)]
+  const currentIndex = matches.length - 1;
+  const previousMatch = matches[currentIndex - 1]
+  const previousWord = previousMatch ? previousMatch[0] : '';
+  return previousWord
 }
-
-
-
